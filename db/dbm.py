@@ -7,8 +7,6 @@
 #   Desc    :   test database manager
 #
 
-import sys
-sys.path.append("..")
 import model
 from tornado.options import define, options
 from lib.utils import find_subclasses

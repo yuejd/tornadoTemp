@@ -8,8 +8,8 @@
 #
 
 import tornado.web
-import sys
-sys.path.append("..")
+# import sys
+# sys.path.append("..")
 from db.model import testdb
 # from tornado.web import ErrorHandler
 
