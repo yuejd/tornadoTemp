@@ -1,0 +1,25 @@
+upstream test{
+ server 127.0.0.1:8890;
+ server 127.0.0.1:8891;
+ server 127.0.0.1:8892;
+ server 127.0.0.1:8893;
+ keepalive 1024;
+}
+server {
+ listen 8888;
+ server_name localhost;
+ location /favicon.ico {
+  alias /var/www/favicon.ico;
+ }
+ location / {
+  proxy_pass_header server;
+  proxy_set_header host $http_host;
+  proxy_set_header x-real-ip $remote_addr;
+  proxy_set_header x-scheme $scheme;
+  proxy_pass http://test;
+  proxy_next_upstream error;
+  proxy_read_timeout 7200;
+ }
+ access_log /var/log/nginx/test.access_log;
+ error_log /var/log/nginx/test.error_log;
+}

@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+
+{% block title %}
+Jiadi's tornado template
+{% end %}
+
+{% block section %}
+<!-- <div class="col-md-offset-2 index_msg"> -->
+<div class="col-md-offset-1 index_msg">
+    <div style="margin-left: 30%; margin-right: 30%;">
+        <h4>
+            message
+        </h4>
+        <div style="margin-left: 20%; margin-right: 20%;">
+        <form action="/login" method="POST">
+            {% raw xsrf_form_html() %}
+            Name: <input type="text" name="name" />
+            <input type="submit" value="Log In" />
+        </form>
+        {% if message %}
+        <h5 style="color: red;">{{ message }}</h5>
+        {% end %}
+        </div>
+</div>
+</div>
+{% end %}

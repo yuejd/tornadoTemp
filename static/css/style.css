@@ -1,0 +1,54 @@
+header {
+  background: none repeat scroll 0 0 #6f5499;
+  border-bottom: 3px solid #6f5499;
+  border-top: 3px solid #6f5499;
+  margin-bottom: 20px;
+  padding:20px 0 50px 0;
+  color: #fff;
+}
+
+h1 {
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+
+section {
+  border-top: 30px;
+  margin-bottom: 20px;
+  padding: 50px 0;
+  color: #fff;
+}
+
+body {
+  background-color: #eee;
+  padding-bottom: 40px;
+}
+
+.nodefind_form {
+  color: #949494
+}
+
+#search_result {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nodefind_table {
+  color: #555
+}
+
+.zone_form {
+  color: #949494
+}
+
+.zone_table {
+  color: #555
+}
+
+.searchzone_form {
+  color: #949494
+}
+
+.index_msg {
+  color: #2a6496
+}
