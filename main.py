@@ -36,9 +36,9 @@ class Application(tornado.web.Application):
 
 
 def main(port=8888):
-    logger.debug("main: web started.")
     http_server = tornado.httpserver.HTTPServer(Application())
     http_server.listen(port)
+    logger.debug("Server running on http://0.0.0.0:%d" % port)
     tornado.ioloop.IOLoop.instance().start()
 
 

@@ -20,6 +20,14 @@ def find_subclasses(klass, include_self=False):
     return accum
 
 
+def setting_from_object(obj):
+    settings = dict()
+    for key in dir(obj):
+        if key.isupper():
+            settings[key.lower()] = getattr(obj, key)
+    return settings
+
+
 def get_file_names(file_path, inner):
     source_file = os.listdir(file_path)
     return filter(lambda x: x.find(inner) >= 0, source_file)
